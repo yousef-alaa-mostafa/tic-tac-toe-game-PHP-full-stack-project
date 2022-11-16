@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/tictactoe.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Itim&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      function switchTheme() {
+        // TODO : ADD THE CODE FOR THE JQUERY TO TOGGLE FROM DARK TO LIGHT AND VICE VERSA
+        $(document).ready(function () {
+          $("#background").toggleClass("background-dark background-light");
+          $("#title").toggleClass("title-dark title-light");
+          $("#display1").toggleClass("display-dark display-light");
+          $("#display2").toggleClass("display-dark display-light");
+          $("#tile1").toggleClass("tile-dark tile-light");
+          $("#tile2").toggleClass("tile-dark tile-light");
+          $("#tile3").toggleClass("tile-dark tile-light");
+          $("#tile4").toggleClass("tile-dark tile-light");
+          $("#tile5").toggleClass("tile-dark tile-light");
+          $("#tile6").toggleClass("tile-dark tile-light");
+          $("#tile7").toggleClass("tile-dark tile-light");
+          $("#tile8").toggleClass("tile-dark tile-light");
+          $("#tile9").toggleClass("tile-dark tile-light");
+        });
+      }
+    </script>
+    <script src="js/tictactoe.js"></script>
+    <script src="js/jquery.min.js"></script>
+
+    <title>Tic-Tac-Toe</title>
+  </head>
+  <body>
+    <header>
+      <form action="logout.php" style="display: inline">
+        <button onclick="logout.php">Log out</button>
+      </form>
+      <button onclick="switchTheme()">Switch Theme</button>
+    </header>
+    <main class="background-dark" id="background">
+      <section class="title-dark" id="title">
+        <h1>Tic Tac Toe</h1>
+      </section>
+      <section class="display-dark" id="display1">
+        Player <span class="display-player playerX">X</span>'s turn
+      </section>
+      <section class="container">
+        <div class="tile tile-dark" id="tile1"></div>
+        <div class="tile tile-dark" id="tile2"></div>
+        <div class="tile tile-dark" id="tile3"></div>
+        <div class="tile tile-dark" id="tile4"></div>
+        <div class="tile tile-dark" id="tile5"></div>
+        <div class="tile tile-dark" id="tile6"></div>
+        <div class="tile tile-dark" id="tile7"></div>
+        <div class="tile tile-dark" id="tile8"></div>
+        <div class="tile tile-dark" id="tile9"></div>
+      </section>
+      <section class="display-dark announcer hide" id="display2"></section>
+      <section class="controls">
+        <button id="reset">Reset</button>
+      </section>
+    </main>
+  </body>
+</html>
